@@ -104,7 +104,7 @@ public class SplashScreen extends CordovaPlugin {
     private boolean isMaintainAspectRatio () {
         return preferences.getBoolean("SplashMaintainAspectRatio", false);
     }
-
+/*
     @Override
     public void onPause(boolean multitasking) {
         if (HAS_BUILT_IN_SPLASH_SCREEN) {
@@ -113,7 +113,7 @@ public class SplashScreen extends CordovaPlugin {
         // hide the splash screen to avoid leaking a window
         this.removeSplashScreen();
     }
-
+*/
     @Override
     public void onDestroy() {
         if (HAS_BUILT_IN_SPLASH_SCREEN) {
@@ -122,7 +122,7 @@ public class SplashScreen extends CordovaPlugin {
         // hide the splash screen to avoid leaking a window
         this.removeSplashScreen();
         // If we set this to true onDestroy, we lose track when we go from page to page!
-        //firstShow = true;
+        firstShow = true;
     }
 
     @Override
